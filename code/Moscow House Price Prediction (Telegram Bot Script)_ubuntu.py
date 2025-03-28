@@ -125,7 +125,7 @@ async def predict_price(update, chat_id):
     features = [user_data[chat_id][col] for col in feature_order]
     region = "Moscow" if user_data[chat_id]["region_code"] == 0 else "Moscow region"
     
-    predicted_price = model.predict([features])[0]
+    predicted_price = moscow_house_price_model.predict([features])[0]
     
     std_dev = price_std[region]
     price_range_min = predicted_price - (std_dev / (user_data[chat_id]["area"] * 0.5))
