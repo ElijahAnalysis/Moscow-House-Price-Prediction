@@ -1,0 +1,6 @@
+asyncio
+numpy
+opencv-python-headless
+python-telegram-bot
+joblib
+nest-asyncio
