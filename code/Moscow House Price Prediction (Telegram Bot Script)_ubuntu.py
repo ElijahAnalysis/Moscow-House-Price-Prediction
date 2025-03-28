@@ -136,8 +136,8 @@ async def predict_price(update, chat_id):
     predicted_price = round_to_thousand(predicted_price)
     
     await update.message.reply_text(
-        f"💰 Estimated Price: {predicted_price:,} RUB\n"
-        f"📉 Possible Range: {price_range_min:,} - {price_range_max:,} RUB\n"
+        f"💰 Estimated Price:\n {predicted_price:,} RUB\n"
+        f"📉 Possible Range:\n {price_range_min:,} - {price_range_max:,} RUB\n"
         f"🏙️ Region: {region}\n"
     )
     del user_data[chat_id]
